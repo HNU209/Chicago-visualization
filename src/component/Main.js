@@ -6,21 +6,21 @@ import Splash from './Splash';
 
 const axios = require('axios');
 
-const getTripData = () => {
-  const res = axios.get(`/data/visual_data/chicago_trips.json`);
+const getTripData = type => {
+  const res = axios.get(`https://raw.githubusercontent.com/HNU209/Chicago-visualization/main/src/data/visual_data/chicago_${type}.json`);
   const data = res.then(r => r.data);
   return data;
 };
 
 const getRestData = type => {
-  const res = axios.get(`/data/visualization_data/chicago_${type}.json`);
+  const res = axios.get(`https://raw.githubusercontent.com/HNU209/Chicago-visualization/main/src/data/visualization_data/chicago_${type}.json`);
   const result = res.then(r => r.data);
   return result
 }
 
 export default function Main() {
   const minTime = 0;
-  const maxTime = 1400;
+  const maxTime = 1440;
 
   const [load, setLoad] = useState(false);
   const [time, setTime] = useState(minTime);
@@ -30,7 +30,7 @@ export default function Main() {
 
   useEffect(() => {
     async function getFetchData() {
-      const trip = await getTripData();
+      const trip = await getTripData('trips');
       const empty = await getRestData('empty_taxi');
       const ps = await getRestData('ps_location');
 
