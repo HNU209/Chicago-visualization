@@ -63,10 +63,9 @@ const ICON_MAPPING = {
 const currData = (data, time) => {
   const arr = [];
 
-  Object.values(data).forEach(v => {
-    const path = v.loc;
-    const timestamp = v.timestamps;
-    const [start, end] = timestamp;
+  data.forEach(v => {
+    const path = v.path;
+    const [start, end] = v.timestamp;
 
     if ((time >= start) && (time <= end)) {
       arr.push(path);
@@ -96,8 +95,8 @@ function renderLayers(props) {
     new TripsLayer({
       id: 'trip',
       data: trip,
-      getPath: (d) => d.trips,
-      getTimestamps: (d) => d.timestamps,
+      getPath: (d) => d.trip,
+      getTimestamps: (d) => d.timestamp,
       getColor: (d) => 
       d.vendor === 0 ? theme.trailColor0 : theme.trailColor1,
       opacity: 0.3,
