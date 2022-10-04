@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Chicago-visualization/static/css/main.a24795cc.css",
-    "main.js": "/Chicago-visualization/static/js/main.2e80a7cb.js",
+    "main.js": "/Chicago-visualization/static/js/main.fbb601dc.js",
     "static/js/787.25902c8d.chunk.js": "/Chicago-visualization/static/js/787.25902c8d.chunk.js",
     "service-worker.js": "/Chicago-visualization/service-worker.js",
     "index.html": "/Chicago-visualization/index.html",
     "main.a24795cc.css.map": "/Chicago-visualization/static/css/main.a24795cc.css.map",
-    "main.2e80a7cb.js.map": "/Chicago-visualization/static/js/main.2e80a7cb.js.map",
+    "main.fbb601dc.js.map": "/Chicago-visualization/static/js/main.fbb601dc.js.map",
     "787.25902c8d.chunk.js.map": "/Chicago-visualization/static/js/787.25902c8d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a24795cc.css",
-    "static/js/main.2e80a7cb.js"
+    "static/js/main.fbb601dc.js"
   ]
 }
